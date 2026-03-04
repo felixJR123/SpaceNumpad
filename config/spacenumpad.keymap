@@ -2,13 +2,34 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        zero {
+            bindings = <&ht_zero_dot DOT KP_NUMBER_0>;
+            key-positions = <0 1 2>;
+        };
+    };
+
+    behaviors {
+        ht_zero_dot: ht_zero_dot {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HT_ZERO_DOT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             display-name = "Base";
             bindings = <
-                &kp A &kp B &kp C &kp D &kp E &kp F &kp G &kp H &kp I
+&kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9
             >;
         };
     };

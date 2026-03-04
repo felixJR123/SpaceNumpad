@@ -1,4 +1,6 @@
 {
+  "id": "spacenumpad",
+  "name": "spacenumpad",
   "layouts": {
     "spacenumpad": {
       "layout": [
@@ -13,5 +15,6 @@
         { "row": 0, "col": 8, "x": 2, "y": 0 }
       ]
     }
-  }
+  },
+  "sensors": []
 }
